@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/logo_description"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ujkz" />
     <EditText
         android:id="@+id/nom"
         android:layout_width="match_parent"
