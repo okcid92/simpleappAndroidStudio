@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText prenom;
     private Button btnValider;
     private Button btnAnnuler;
+    private Button btnListe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,15 @@ public class MainActivity extends AppCompatActivity {
         this.prenom = findViewById(R.id.prenom);
         this.btnValider = findViewById(R.id.btnvalider);
         this.btnAnnuler = findViewById(R.id.btnannuler);
+        this.btnListe = findViewById(R.id.btnliste);
 // Implémentation de la navigation au click
+        logo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent activiteliste = new Intent(getApplicationContext(), ListeActivity.class);
+                startActivity(activiteliste);
+            }
+        });
         btnValider.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -39,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 mcontexte.AjoutePersonne(p);
                 startActivity(activite2);
 //finish();
+            }
+        });
+        btnListe.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent activiteliste = new Intent(getApplicationContext(), ListeActivity.class);
+                startActivity(activiteliste);
             }
         });
     }
